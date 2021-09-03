@@ -31,6 +31,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import android.widget.TextView;
+
 import static com.wellseek.cordova.SelectorCordovaPlugin.SELECTOR_THEME;
 import static com.wellseek.cordova.SelectorCordovaPlugin.setNumberPickerTextColor;
 
@@ -98,7 +100,17 @@ public class SelectorCordovaPlugin extends CordovaPlugin {
                 public void run() {
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(cordova.getActivity(), SELECTOR_THEME.getAlertBuilderTheme());
-                    builder.setTitle(title);
+                    
+                    TextView titleView = new TextView(cordova.getActivity());
+                    // You Can Customise your Title here
+                    titleView.setText(title);
+                    titleView.setBackgroundColor(Color.GRAY);
+                    titleView.setPadding(10, 30, 10, 30);
+                    titleView.setGravity(Gravity.CENTER);
+                    titleView.setTextColor(Color.WHITE);
+                    titleView.setTextSize(20);
+                    builder.setCustomTitle(titleView);
+                    
                     builder.setCancelable(true);
                     List<PickerView> views = null;
                     try {
