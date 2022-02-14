@@ -25,7 +25,7 @@
 
     <!-- android -->
     <platform name="android">
-        <framework src="io.github.ShawnLin013:number-picker:2.4.13" />
+        <!-- <framework src="io.github.ShawnLin013:number-picker:2.4.13" /> -->
         <js-module src="www/selectorplugin.js" name="plugin">
             <runs/>
 

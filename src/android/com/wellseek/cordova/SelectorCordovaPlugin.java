@@ -13,8 +13,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-//import android.widget.NumberPicker;
-import com.shawnlin.numberpicker.NumberPicker;
+import android.widget.NumberPicker;
+//import com.shawnlin.numberpicker.NumberPicker;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -295,6 +295,7 @@ class PickerView {
         if (picker == null) {
             picker = new NumberPicker(activity);
 
+            /*
             // Set the amount of items to see
             picker.setWheelItemCount(7);
             // Set divider color
@@ -305,6 +306,7 @@ class PickerView {
             picker.setTextColor(Color.GRAY);
             // Set divider distance, default 48
             picker.setDividerDistance(58);
+            */
 
             picker.setMinValue(0);
             picker.setMaxValue(dataToShow.length - 1);
